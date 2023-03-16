@@ -15,53 +15,59 @@ computer = random.randint(1,3)
 piedra= 1
 papel=2
 tijera=3
-p = "piedra"
-pa= "papel"
-t="tijera"
 # procesing           
 if user == 1:
-    option=p
     if computer==2:
-        optionC=pa
         rta="PERDISTE"
     elif computer==3:
-        optionC=t
         rta="GANASTE"
     else:
-        optionC=p
         rta="EMPATE"
 elif user == 2:
-    option=pa
     if computer==1:
-        optionC=p
         rta="GANASTE"
     elif computer==2:
-        optionC=pa
         rta="EMPATE"
     else:
-        optionC=t
         rta="PERDISTE"
 elif user==3:
-    option=t
     if computer==2:
-        optionC=pa
         rta="GANASTE"
     elif computer==3:
-        optionC=t
         rta="EMPATE"
     else:
-        optionC=p
         rta="PERDISTE"
 else:
     bandera=True
+# option user
+if user==1:
+    rta2="Piedra"
+elif user ==2:
+    rta2="Papel"
+elif user ==3:
+    rta2="Tijera"
+# option computer
+if computer==1:
+    rta3="Piedra"
+elif computer ==2:
+    rta3="Papel"
+elif computer ==3:
+    rta3="Tijera"
 #output
 if bandera==False:
+   h="*"*10
+   print(h)
    print(rta)
-   print("opcion del user ==> ", str(option))
-   print("Opcion del computer ==> ", str(optionC))
+   print(h)
+   print("opcion del user ==> ", str(rta2))
+   print("Opcion del computer ==> ", str(rta3))
+   print(h)
 else:
+    h="*"*10
     bandera==True
+    print(h)
     print("Elegiste perder!!!")
+    print(h)
     
 
 
